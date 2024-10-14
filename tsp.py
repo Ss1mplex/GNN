@@ -37,7 +37,7 @@ def calculate_route_length(route):
     total_distance = 0
     for i in range(len(route)):
         city1 = route[i]
-        city2 = route[(i + 1) % len(route)]  # 环路
+        city2 = route[(i + 1) % len(route)]
         total_distance += distance(city1, city2)
     return total_distance
 
@@ -152,7 +152,7 @@ def evolutionary_algorithm(mu, alpha, iterations, snapshot_iterations):
 if __name__ == "__main__":
     mu_values = [10, 20, 100, 150]
     alpha_values = [0.02, 0.05, 0.1, 0.25, 0.75, 1, 2]
-    iterations = 10000  # 总迭代次数
+    iterations = 10000
     snapshot_iterations = [500, 1000, 5000, 10000]
 
     for mu in mu_values:
